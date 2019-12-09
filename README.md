@@ -1,5 +1,4 @@
 # Apwell
-Your Daily Self Care Partner 
 
 Originally created using Native Android Xamarin
 
