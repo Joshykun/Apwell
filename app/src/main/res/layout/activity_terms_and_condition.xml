@@ -1,109 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#444444">
-    <RelativeLayout
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:background="@drawable/bgdesign"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true" />
-    <RelativeLayout
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:background="@drawable/bgdesign2"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true" />
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:background="#333333"
-        android:id="@+id/header">
+        android:layout_height="match_parent"
+        android:background="#444444">
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="@drawable/bgdesign"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true" />
+
         <RelativeLayout
             android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:background="@drawable/headertab" />
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignParentLeft="true"
-            android:background="#00008080"
-            android:id="@+id/exitit" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TERMS AND CONDITIONS"
-            android:id="@+id/termstext"
-            android:textSize="20dp"
-            android:layout_marginRight="10dp"
-            android:layout_alignParentRight="true"
+            android:layout_height="150dp"
+            android:background="@drawable/bgdesign2"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="6dp"
-            android:textColor="#60FFFFFF" />
-    </RelativeLayout>
-    <androidx.cardview.widget.CardView
-        android:layout_below="@id/header"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_centerInParent="true"
-        android:id="@+id/scrollterms"
-        app:cardCornerRadius="10dp"
-        app:cardBackgroundColor="#FFFFFF">
-        <ScrollView
+            android:layout_alignParentStart="true" />
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbarSize="0dp">
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="#333333"
+            android:id="@+id/header">
+
             <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:background="@drawable/headertab" />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:background="#00008080"
+                android:id="@+id/exitit" />
+
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_height="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TERMS AND CONDITIONS"
+                android:id="@+id/termstext"
+                android:textSize="20sp"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="6dp"
+                android:textColor="#60FFFFFF"
+                android:fontFamily="@font/commando"
+                android:typeface="normal"/>
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_below="@id/header"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/scrollterms"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbarSize="0dp">
+
+                <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:id="@+id/termsandcondition"
-                    android:textSize="15dp"
-                    android:textColor="#000000"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:text="\n1. Terms of use\n\n By downloading this mobile application or using “Apwell: Your Daily Self-care Partner” you are accepting the terms and condition of use, we have the right to amend these terms and condition at any time. If you disagree with any of these terms and condition of use, you must immediately discontinue the access or any services that this application will provide and uninstall this mobile application “Apwell: Your Daily Self-care Partner”, if you are to continue to access and receive services from this mobile application, you must accept the terms and agreement of this mobile application including the amendments of this terms and condition from time to time.\n\nThe mobile application Apwell: Your Daily Self-care Partner will not be liable of any harmful and troubled situations that may encountered by the user. The Apwell assumes upon agreeing to this terms and condition that he or she will be held responsible for all the actions that one user did and decide on.\n\n2. Definitions\n\nIncluding in these Terms of Agreement is the definitions, where all capitalized letter have the following meaning and the Apwell will be needing from the user and the mobile application will provide.\n\nPRIVACY POLICY Apwell: Your Daily Self-care Partner will be needing some information such as full name, height, weight, age, birthdate, BMI, activity level and etc. rest assure that these credentials will be anonymous (unless the user will let it show to others) and will be taken only out of necessity.\n\nSERVICES means all the services provided by Apwell: Your Daily Self-care Partner via the Mobile Application to Users.\n\nUSERS means users of the Mobile Application, the one who agrees in the terms of agreement of this mobile application and User means any person who will be benefitted through the use of this mobile application.\n\n3. General Issues about the mobile application and the services.\n\n3.1 Applicability of terms and conditions: The use of any Services and/or the Mobile Application are subject to these Terms and Conditions of Use.\n\n3.2 Scope: The Mobile Application, the services are personal use only and must not be used for business purposes.\n\n3.3 Prevention of use: the user of this mobile application must only be for those who are benefitted through this mobile application, Apwell: your Daily Self-care Partner will not be liable in case of any harm or trouble to the user.\n\n3.4 Equipment and Networks: The services that this mobile application provide does not include the provision of mobile telephone, handheld device or other necessary equipment and network to access the Mobile Application.\n\n3.5 Permission to use mobile application: The team Apwell is not liable if somebody else accesses the mobile application that you’ve download. The mobile application assumes that whoever access the mobile application is the owner of all the credentials that been gathered.\n\n4. Your Obligation\n\n4.1 User Terms: You agree to abide the terms of agreement, including to its amendments from time to time.\n\n4.2 Accurate Information: You warrant that all information that is demanded by the application is true and accurate as possible.\n\n4.3 Content on the Mobile Application: it is also your responsibility to ensure and protect that the information about yourself is secured.\n\n4.4 User of the mobile application: we do not guarantee the benefits of those people who have special cases (have lethal diseases, have sickness) to be benefitted through using this mobile application. It is your responsibility and decision to use this mobile application and on how to utilize it, we assume no liability whatever occurrence that may happen to the user\n\n5. RULES ABOUT USE OF THE SERVICE AND THE MOBILE APPLICATION\n\n5.1 We do not guarantee that the services of Apwell will be free of faults, and we do not accept liability for any such faults and errors. In case of any errors, feel free to contact us at 354-1371.\n\n5.2 We do not give any warranty that the Services and the Mobile Application are free from viruses or anything else which may have a harmful effect on any technology.\n\n6. DISCLAIMER AND EXCLUSION OF LIABILITY\n\n6.1 We do not warrant that the Mobile Application will always be accessible, uninterrupted, timely, secure, error free or free from computer virus or other invasive or damaging code or that the Mobile Application will not be affected by any acts of God or other force majeure events.\n\n6.2  While we may use reasonable efforts to include accurate and up-to-date information on the Mobile Application, we make no warranties or representations as to its accuracy, timeliness or completeness.\n\n7. AMENDMENTS\n\n7.1 We may periodically make changes to the contents of the Mobile Application, including to the descriptions, BMI, water intake and etc., at any time and without notice. We assume no liability or responsibility for any errors in the content of the Mobile Application.\n\n7.2 We reserve the right to amend these Terms and Conditions of Use from time to time without notice. The revised Terms and Conditions of Use will be posted on the Mobile Application and shall take effect from the date of such posting. You are advised to review these terms and conditions." />
-                <ru.katso.livebutton.LiveButton
-                    android:id="@+id/buttonaccept"
-                    android:text="I accept the terms and conditions"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:textColor="#FFFFFF"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_below="@id/termsandcondition"
-                    app:corners="10dp"
-                    app:normalHeight="1dp"
-                    app:pressedHeight="0dp"
-                    app:backgroundColor="#008080"
-                    app:shadowColor="#20000000" />
-                <ru.katso.livebutton.LiveButton
-                    android:id="@+id/buttondecline"
-                    android:text="I do not accept the terms and conditions"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:textColor="#FFFFFF"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:visibility="invisible"
-                    app:corners="10dp"
-                    app:normalHeight="1dp"
-                    app:pressedHeight="0dp"
-                    app:backgroundColor="#333333"
-                    app:shadowColor="#20000000" />
-            </RelativeLayout>
-        </ScrollView>
-    </androidx.cardview.widget.CardView>
-</RelativeLayout>
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/termsandcondition"
+                        android:textSize="15sp"
+                        android:typeface="normal"
+                        android:fontFamily="@font/sourcesansprolight"
+                        android:textColor="#000000"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:text="\n1. Terms of use\n\n By downloading this mobile application or using “Apwell: Your Daily Self-care Partner” you are accepting the terms and condition of use, we have the right to amend these terms and condition at any time. If you disagree with any of these terms and condition of use, you must immediately discontinue the access or any services that this application will provide and uninstall this mobile application “Apwell: Your Daily Self-care Partner”, if you are to continue to access and receive services from this mobile application, you must accept the terms and agreement of this mobile application including the amendments of this terms and condition from time to time.\n\nThe mobile application Apwell: Your Daily Self-care Partner will not be liable of any harmful and troubled situations that may encountered by the user. The Apwell assumes upon agreeing to this terms and condition that he or she will be held responsible for all the actions that one user did and decide on.\n\n2. Definitions\n\nIncluding in these Terms of Agreement is the definitions, where all capitalized letter have the following meaning and the Apwell will be needing from the user and the mobile application will provide.\n\nPRIVACY POLICY Apwell: Your Daily Self-care Partner will be needing some information such as full name, height, weight, age, birthdate, BMI, activity level and etc. rest assure that these credentials will be anonymous (unless the user will let it show to others) and will be taken only out of necessity.\n\nSERVICES means all the services provided by Apwell: Your Daily Self-care Partner via the Mobile Application to Users.\n\nUSERS means users of the Mobile Application, the one who agrees in the terms of agreement of this mobile application and User means any person who will be benefitted through the use of this mobile application.\n\n3. General Issues about the mobile application and the services.\n\n3.1 Applicability of terms and conditions: The use of any Services and/or the Mobile Application are subject to these Terms and Conditions of Use.\n\n3.2 Scope: The Mobile Application, the services are personal use only and must not be used for business purposes.\n\n3.3 Prevention of use: the user of this mobile application must only be for those who are benefitted through this mobile application, Apwell: your Daily Self-care Partner will not be liable in case of any harm or trouble to the user.\n\n3.4 Equipment and Networks: The services that this mobile application provide does not include the provision of mobile telephone, handheld device or other necessary equipment and network to access the Mobile Application.\n\n3.5 Permission to use mobile application: The team Apwell is not liable if somebody else accesses the mobile application that you’ve download. The mobile application assumes that whoever access the mobile application is the owner of all the credentials that been gathered.\n\n4. Your Obligation\n\n4.1 User Terms: You agree to abide the terms of agreement, including to its amendments from time to time.\n\n4.2 Accurate Information: You warrant that all information that is demanded by the application is true and accurate as possible.\n\n4.3 Content on the Mobile Application: it is also your responsibility to ensure and protect that the information about yourself is secured.\n\n4.4 User of the mobile application: we do not guarantee the benefits of those people who have special cases (have lethal diseases, have sickness) to be benefitted through using this mobile application. It is your responsibility and decision to use this mobile application and on how to utilize it, we assume no liability whatever occurrence that may happen to the user\n\n5. RULES ABOUT USE OF THE SERVICE AND THE MOBILE APPLICATION\n\n5.1 We do not guarantee that the services of Apwell will be free of faults, and we do not accept liability for any such faults and errors. In case of any errors, feel free to contact us at 354-1371.\n\n5.2 We do not give any warranty that the Services and the Mobile Application are free from viruses or anything else which may have a harmful effect on any technology.\n\n6. DISCLAIMER AND EXCLUSION OF LIABILITY\n\n6.1 We do not warrant that the Mobile Application will always be accessible, uninterrupted, timely, secure, error free or free from computer virus or other invasive or damaging code or that the Mobile Application will not be affected by any acts of God or other force majeure events.\n\n6.2  While we may use reasonable efforts to include accurate and up-to-date information on the Mobile Application, we make no warranties or representations as to its accuracy, timeliness or completeness.\n\n7. AMENDMENTS\n\n7.1 We may periodically make changes to the contents of the Mobile Application, including to the descriptions, BMI, water intake and etc., at any time and without notice. We assume no liability or responsibility for any errors in the content of the Mobile Application.\n\n7.2 We reserve the right to amend these Terms and Conditions of Use from time to time without notice. The revised Terms and Conditions of Use will be posted on the Mobile Application and shall take effect from the date of such posting. You are advised to review these terms and conditions." />
+
+                    <ru.katso.livebutton.LiveButton
+                        android:id="@+id/buttonaccept"
+                        android:text="I accept the terms and conditions"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/sourcesansprolight"                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/termsandcondition"
+                        app:corners="10dp"
+                        app:normalHeight="1dp"
+                        app:pressedHeight="0dp"
+                        app:backgroundColor="#008080"
+                        app:shadowColor="#20000000" />
+
+                    <ru.katso.livebutton.LiveButton
+                        android:id="@+id/buttondecline"
+                        android:text="I do not accept the terms and conditions"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/sourcesansprolight"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="invisible"
+                        app:corners="10dp"
+                        app:normalHeight="1dp"
+                        app:pressedHeight="0dp"
+                        app:backgroundColor="#333333"
+                        app:shadowColor="#20000000" />
+                </RelativeLayout>
+            </ScrollView>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</layout>

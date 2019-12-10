@@ -1,7 +1,7 @@
-package adu.capstone.apwell.splash
+package adu.capstone.apwell.ui.splash
 
 import adu.capstone.apwell.R
-import adu.capstone.apwell.terms.TermsActivity
+import adu.capstone.apwell.ui.terms.TermsActivity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import gr.net.maroulis.library.EasySplashScreen
@@ -13,7 +13,7 @@ class SplashActivity : AppCompatActivity() {
 
         val splashView = EasySplashScreen(this)
             .withTargetActivity(TermsActivity::class.java)
-            .withSplashTimeOut(4000)
+            .withSplashTimeOut(2000)
             .withBackgroundResource(R.drawable.apwellsplashscreen)
             .create()
 

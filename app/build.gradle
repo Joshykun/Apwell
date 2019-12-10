@@ -5,6 +5,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -22,25 +23,78 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+
+configurations {
+    all {
+        exclude group: 'org.json', module: 'json'
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation imports.kotlin.stdlib
+    implementation imports.kotlin.coroutines
 
-    //SplashScreen
+    /** Android Testing */
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation imports.test.jUnit
+    androidTestImplementation imports.test.runner
+    androidTestImplementation imports.test.espresso
+
+    /** AndroidX */
+    implementation imports.android.core
+    implementation imports.android.appCompat
+    implementation imports.android.fragmentKtx
+
+    /** Android Support Libraries */
+    implementation imports.ui.constraintLayout
+    implementation imports.ui.recyclerView
+
+    /** UI Libraries */
+    implementation imports.google.material
+    implementation imports.util.keyboardVisibilityEvent
+    implementation imports.ui.pagerIndicator
+    implementation imports.ui.swipeRevealLayout
+
+    /** Dependency Injection */
+    implementation imports.google.dagger
+    implementation imports.google.daggerAndroid
+    implementation imports.google.daggerAndroidSupport
+    kapt imports.google.daggerProcessor
+    kapt imports.google.daggerAndroidProcessor
+
+    /** Networking Libraries */
+    implementation imports.square.retrofit
+    implementation imports.square.gsonConverter
+    implementation imports.socketio.client
+
+    /** Serialization Libraries */
+    implementation imports.google.gson
+
+    /** Persistence Libraries */
+    implementation imports.jetpack.room
+    kapt imports.jetpack.roomCompiler
+
+    /** Jetpack libraries */
+    implementation imports.jetpack.lifecycle
+    implementation imports.jetpack.navComponentFragment
+    implementation imports.jetpack.navComponentUi
+
+    /** Biometrics Library */
+    implementation imports.jetpack.biometric
+
+    /** LiveButton */
+    implementation 'com.github.dakatso:livebutton:1.0.0'
+
+    /** Splash */
     implementation 'gr.pantrif:easy-android-splash-screen:0.0.1'
 
-    //CardView
-    implementation "androidx.cardview:cardview:1.0.0"
-
-    //LiveButton
-    implementation 'com.github.dakatso:livebutton:1.0.0'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
 }
-

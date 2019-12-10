@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:id="@+id/regparent">
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="@drawable/bgdesign"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true" />
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/bgdesign2"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/bgdesign3"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="@drawable/bgdesign4"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/fieldslayout"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/circleivlogo"
+                    android:src="@drawable/apwelllogo"
+                    app:civ_border_overlay="true"
+                    app:civ_border_color="#ffffff"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome!"
+                    android:textSize="30sp"
+                    android:id="@+id/welcome"
+                    android:layout_below="@id/circleivlogo"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#008080"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/welcome"
+                    android:hint="Name"
+                    android:textColorHint="#999999"
+                    android:gravity="center"
+                    android:id="@+id/textname"
+                    android:textColor="#0b3c49"
+                    android:textSize="15sp"
+                    android:background="#EEEEEE"
+                    android:inputType="textPersonName"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:digits="&quot;abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Gender"
+                    android:textColorHint="#999999"
+                    android:gravity="center"
+                    android:id="@+id/textgender"
+                    android:inputType="text"
+                    android:background="#EEEEEE"
+                    android:textColor="#0b3c49"
+                    android:textSize="15sp"
+                    android:focusable="@bool/abc_action_bar_embed_tabs"
+                    android:layout_below="@id/textname"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp" />
+
+                <ru.katso.livebutton.LiveButton
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Register"
+                    android:textColor="#FFFFFF"
+                    android:layout_below="@id/textgender"
+                    android:textSize="15sp"
+                    android:id="@+id/buttonregister"
+                    android:background="@drawable/regbg"
+                    android:layout_marginBottom="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    app:corners="10dp"
+                    app:normalHeight="1dp"
+                    app:pressedHeight="0dp"
+                    app:backgroundColor="#008080"
+                    app:shadowColor="#20000000" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</layout>

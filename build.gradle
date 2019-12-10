@@ -1,15 +1,103 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext.kotlin_version = '1.3.61'
+    ext.versions = [
+            'compileSdk'             : 29,
+            'minSdk'                 : 21,
+            'targetSdk'              : 29,
+            'defaultVersionCode'     : 1,
+            'defaultVersionName'     : '1.0.0.0',
+            'kotlin'                 : '1.3.61',
+            'kotlinCoroutines'       : '1.3.1',
+            'androidPlugin'          : '3.5.2',
+            'volley'                 : '1.1.0',
+            'jUnit'                  : '4.12',
+            'testRunner'             : '1.2.0',
+            'espressoCore'           : '3.2.0',
+            'androidXCore'           : '1.1.0',
+            'androidXAppCompat'      : '1.1.0',
+            'lifecycle '             : '2.1.0',
+            'constraintLayout'       : '2.0.0-beta3',
+            'recyclerView'           : '1.0.0',
+            'cardview'               : '1.0.0',
+            'material'               : '1.0.0',
+            'keyboardVisibilityEvent': '2.1.0',
+            'pagerIndicator'         : '1.0.3',
+            'swipeRevealLayout'      : '1.4.1',
+            'dagger'                 : '2.25.2',
+            'retrofit'               : '2.6.2',
+            'okhttp'                 : '3.10.0',
+            'socketIO'               : '1.0.0',
+            'gson'                   : '2.8.6',
+            'room'                   : '2.2.1',
+            'biometric'              : '1.0.0-rc02',
+            'navigationComponent'    : '2.1.0'
+    ]
+
+    ext.imports = [
+            android : [
+                    'gradlePlugin': "com.android.tools.build:gradle:${versions.androidPlugin}",
+                    'core'        : "androidx.core:core:${versions.androidXCore}",
+                    'coreKtx'     : "androidx.core:core-ktx:${versions.androidXCore}",
+                    'appCompat'   : "androidx.appcompat:appcompat:${versions.androidXAppCompat}",
+                    'volley'      : "com.android.volley:volley:${versions.volley}",
+                    'fragmentKtx' : "androidx.fragment:fragment-ktx:${versions.androidXCore}"
+            ],
+            ui      : [
+                    'constraintLayout' : "androidx.constraintlayout:constraintlayout:${versions.constraintLayout}",
+                    'recyclerView'     : "androidx.recyclerview:recyclerview:${versions.recyclerView}",
+                    'pagerIndicator'   : "com.romandanylyk:pageindicatorview:${versions.pagerIndicator}",
+                    'swipeRevealLayout': "com.chauthai.swipereveallayout:swipe-reveal-layout:${versions.swipeRevealLayout}",
+                    'cardview'         : "androidx.cardview:cardview:${versions.cardview}"
+            ],
+            util    : [
+                    'keyboardVisibilityEvent': "net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:${versions.keyboardVisibilityEvent}"
+            ],
+            kotlin  : [
+                    'gradlePlugin': "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}",
+                    'stdlib'      : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}",
+                    'coroutines'  : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.kotlinCoroutines}"
+            ],
+            google  : [
+                    'dagger'                : "com.google.dagger:dagger:${versions.dagger}",
+                    'daggerAndroid'         : "com.google.dagger:dagger-android:${versions.dagger}",
+                    'daggerAndroidSupport'  : "com.google.dagger:dagger-android-support:${versions.dagger}",
+                    'daggerProcessor'       : "com.google.dagger:dagger-compiler:${versions.dagger}",
+                    'daggerAndroidProcessor': "com.google.dagger:dagger-android-processor:${versions.dagger}",
+                    'gson'                  : "com.google.code.gson:gson:${versions.gson}",
+                    'material'              : "com.google.android.material:material:${versions.material}"
+            ],
+            jetpack : [
+                    'room'                : "androidx.room:room-runtime:${versions.room}",
+                    'roomCompiler'        : "androidx.room:room-compiler:${versions.room}",
+                    'biometric'           : "androidx.biometric:biometric:${versions.biometric}",
+                    "lifecycle"           : "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle}",
+                    "navComponentFragment": "androidx.navigation:navigation-fragment-ktx:${versions.navigationComponent}",
+                    "navComponentUi"      : "androidx.navigation:navigation-ui-ktx:${versions.navigationComponent}",
+            ],
+            square  : [
+                    'retrofit'     : "com.squareup.retrofit2:retrofit:${versions.retrofit}",
+                    'gsonConverter': "com.squareup.retrofit2:converter-gson:${versions.retrofit}",
+                    'logging'      : "com.squareup.okhttp3:logging-interceptor:${versions.okhttp}"
+            ],
+            socketio: [
+                    'client': "io.socket:socket.io-client:${versions.socketIO}"
+            ],
+            test    : [
+                    'jUnit'   : "junit:junit:${versions.jUnit}",
+                    'runner'  : "androidx.test:runner:${versions.testRunner}",
+                    'espresso': "androidx.test.espresso:espresso-core:${versions.espressoCore}"
+            ]
+    ]
+
     repositories {
         google()
         jcenter()
         
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.2'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath imports.android.gradlePlugin
+        classpath imports.kotlin.gradlePlugin
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
