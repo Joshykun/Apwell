@@ -44,6 +44,7 @@ dependencies {
     /** Android Testing */
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation imports.test.jUnit
     androidTestImplementation imports.test.runner
     androidTestImplementation imports.test.espresso

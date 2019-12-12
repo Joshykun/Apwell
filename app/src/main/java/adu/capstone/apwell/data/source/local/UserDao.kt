@@ -4,6 +4,7 @@ import adu.capstone.apwell.data.models.User
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
+import androidx.room.Update
 
 @Dao
 interface UserDao {
@@ -24,6 +25,9 @@ interface UserDao {
 
     @Insert
     fun insertUser(user:User)
+
+    @Update
+    fun updateUser(user: User)
 
     @Query("DELETE FROM $TABLE_NAME")
     fun deleteUser()

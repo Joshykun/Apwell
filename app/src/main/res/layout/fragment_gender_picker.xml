@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000">
+
+        <ImageView
+            android:src="@drawable/apwelljoshua"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="#00333333"
+            android:id="@+id/d_MalePic" />
+
+        <ImageView
+            android:src="@drawable/apwellkieth"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/d_FemalePic"
+            android:background="#00008080"
+            android:layout_marginLeft="50dp" />
+    </LinearLayout>
+</layout>

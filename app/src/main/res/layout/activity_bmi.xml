@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#444444"
+        android:id="@+id/bmiparent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gender"
+            android:text="Female"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="#333333"
+            android:id="@+id/header">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:background="@drawable/headertab" />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:background="#00008080"
+                android:id="@+id/exitit" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BODY MASS INDEX"
+                android:id="@+id/bmitext"
+                android:textSize="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="6dp"
+                android:textColor="#60FFFFFF" />
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#FFFFFF"
+            android:layout_below="@id/header"
+            android:id="@+id/fillupform"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Please fill up all the requirements"
+                    android:textSize="15dp"
+                    android:textColor="#008080"
+                    android:id="@+id/tasktext" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_height="30dp"
+                    android:layout_width="150dp"
+                    android:layout_centerHorizontal="true"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/btnconverter"
+                    android:layout_below="@id/tasktext">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:layout_width="75dp"
+                            android:layout_height="30dp"
+                            android:id="@+id/btnkgconvert"
+                            android:background="#008080"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12dp"
+                            android:text="Kilograms"
+                            android:layout_alignParentLeft="true" />
+
+                        <Button
+                            android:layout_width="75dp"
+                            android:layout_height="30dp"
+                            android:id="@+id/btnlbconvert"
+                            android:background="#333333"
+                            android:textColor="#666666"
+                            android:text="Pounds"
+                            android:textSize="12dp"
+                            android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="300dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/btnconverter"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/cardheight"
+                    android:clickable="true"
+                    android:layout_centerHorizontal="true"
+                    app:cardCornerRadius="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:layout_width="300dp"
+                            android:layout_height="40dp"
+                            android:hint="Weight(Kg)"
+                            android:gravity="center"
+                            android:background="#DDDDDD"
+                            android:maxLines="1"
+                            android:maxLength="4"
+                            android:id="@+id/textweight"
+                            android:layout_centerHorizontal="true"
+                            android:inputType="numberDecimal"
+                            android:textColor="#000000"
+                            android:textSize="15dp" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/textweight"
+                            android:layout_marginTop="1dp"
+                            android:layout_centerHorizontal="true">
+
+                            <EditText
+                                android:layout_width="150dp"
+                                android:layout_height="40dp"
+                                android:hint="Height(Ft)"
+                                android:gravity="center"
+                                android:background="#DDDDDD"
+                                android:id="@+id/textheightfeet"
+                                android:enabled="false"
+                                android:inputType="numberDecimal"
+                                android:textColor="#000000"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:layout_width="150dp"
+                                android:layout_height="40dp"
+                                android:hint="Height(In)"
+                                android:gravity="center"
+                                android:enabled="false"
+                                android:background="#DDDDDD"
+                                android:id="@+id/textheightinch"
+                                android:inputType="numberDecimal"
+                                android:textColor="#000000"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="300dp"
+                            android:layout_height="50dp"
+                            android:id="@+id/heightselect"
+                            android:layout_below="@id/textweight"
+                            android:background="#20000000" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fillupform"
+            android:id="@+id/physicalactivityform"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:text="PHYSICAL ACTIVITY"
+                    android:layout_below="@id/fillupform"
+                    android:id="@+id/textlifestyle"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#008080" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/textlifestyle"
+                    android:id="@+id/Linear2"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:text="Not Active"
+                            android:id="@+id/sedentary"
+                            android:textSize="15dp"
+                            android:gravity="center"
+                            android:background="#333333"
+                            android:textColor="#666666" />
+
+                        <Button
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:text="Active"
+                            android:id="@+id/active"
+                            android:textSize="15dp"
+                            android:background="#333333"
+                            android:textColor="#666666" />
+
+                        <Button
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:text="Very Active"
+                            android:gravity="center"
+                            android:id="@+id/veryactive"
+                            android:textSize="15dp"
+                            android:background="#333333"
+                            android:textColor="#666666" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <ru.katso.livebutton.LiveButton
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/buttoncompute"
+                    android:text="Calculate BMI"
+                    android:layout_below="@id/Linear2"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15dp"
+                    app:corners="10dp"
+                    app:normalHeight="1dp"
+                    app:pressedHeight="0dp"
+                    app:backgroundColor="#008080"
+                    app:shadowColor="#20000000" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/convertedtext"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/activityvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_centerHorizontal="true"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="#FFFFFF"
+            android:layout_below="@id/physicalactivityform"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/resultform"
+            android:layout_alignParentLeft="true"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/bmihead"
+                    android:layout_centerHorizontal="true"
+                    android:text="BMI RESULT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#008080"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15dp"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:id="@+id/viewresult"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#0b3c49"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_below="@id/bmihead" />
+
+                <TextView
+                    android:id="@+id/viewresult2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewresult"
+                    android:textColor="#59463c"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp" />
+
+                <TextView
+                    android:id="@+id/wiwotext"
+                    android:layout_centerHorizontal="true"
+                    android:text="Water Needed\n(Without Physical Activity):"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#0b3c49"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/viewresult2"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/viewresult3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/wiwotext"
+                    android:textColor="#0b3c49"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/wiwtext"
+                    android:layout_centerHorizontal="true"
+                    android:text="Daily Water Need"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#008080"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/viewresult2" />
+
+                <TextView
+                    android:id="@+id/viewresult4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/wiwtext"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp" />
+
+                <ru.katso.livebutton.LiveButton
+                    android:id="@+id/buttonproceed"
+                    android:text="Proceed"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    app:corners="10dp"
+                    app:normalHeight="1dp"
+                    app:pressedHeight="0dp"
+                    app:backgroundColor="#008080"
+                    app:shadowColor="#20000000" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/resultform"
+            android:layout_below="@id/physicalactivityform"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:id="@+id/imagebody" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            app:cardCornerRadius="10dp"
+            android:id="@+id/cardheightpicker"
+            android:visibility="invisible"
+            android:layout_centerInParent="true"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:background="#333333"
+                    android:id="@+id/heads">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:textSize="15dp"
+                        android:text="Feet'"
+                        android:id="@+id/headft"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:textSize="15dp"
+                        android:id="@+id/headin"
+                        android:gravity="center"
+                        android:text="Inches''"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="320dp"
+                    android:layout_below="@id/heads"
+                    android:orientation="horizontal"
+                    android:id="@+id/pickers">
+
+                    <NumberPicker
+                        android:layout_height="match_parent"
+                        android:layout_width="150dp"
+                        android:layout_alignParentTop="true"
+                        android:theme="@style/NumberPickerText"
+                        android:id="@+id/pickft" />
+
+                    <NumberPicker
+                        android:layout_height="match_parent"
+                        android:layout_width="150dp"
+                        android:layout_below="@id/pickft"
+                        android:theme="@style/NumberPickerText"
+                        android:id="@+id/pickin" />
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Enter"
+                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:textColor="#FFFFFF"
+                    android:background="#008080"
+                    android:layout_below="@id/pickers"
+                    android:id="@+id/enterheight" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</layout>

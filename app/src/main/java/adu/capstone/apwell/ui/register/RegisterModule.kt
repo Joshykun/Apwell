@@ -4,6 +4,7 @@ import adu.capstone.apwell.di.infrastructure.ViewModelKey
 import androidx.lifecycle.ViewModel
 import dagger.Binds
 import dagger.Module
+import dagger.android.ContributesAndroidInjector
 import dagger.multibindings.IntoMap
 
 
@@ -14,5 +15,8 @@ abstract class RegisterModule{
     @IntoMap
     @ViewModelKey(RegisterViewModel::class)
     abstract fun bindViewModel(viewModel: RegisterViewModel): ViewModel
+
+    @ContributesAndroidInjector
+    abstract fun genderPickerFragment(): GenderPickerFragment
 
 }
